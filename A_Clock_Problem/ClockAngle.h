@@ -6,5 +6,5 @@ class ClockType {
     public:
         int Angle(int t);
         int Calculate_Seconds(int m, int h);
-
+        bool setMilitaryTime(bool mt);
 };
