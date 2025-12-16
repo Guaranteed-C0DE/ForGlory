@@ -9,7 +9,7 @@ ClockType::ClockType() {
     total_seconds = 0;
     Military_Time = false;
 }
-int ClockType::Angle(int t) { //But how is t = RHO even going to be an argument?
+int ClockType::Calculate_Angle(int t) { //But how is t = RHO even going to be an argument?
     if (fmod(t, 2*RHO) > 0 && fmod(t, 2*RHO) < RHO)
     {
         return (11/120)*fmod(t, 2*RHO);

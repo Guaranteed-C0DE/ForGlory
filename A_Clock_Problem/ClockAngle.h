@@ -12,8 +12,11 @@ class ClockType {
         bool Military_Time;
     public:
         ClockType();
-        int Angle(int t);
+        int Calculate_Angle(int t);
         int Calculate_Seconds(int m, int h, int s, bool mt, MeridianTime MeT);
         void setMilitaryTime(bool mt);
         void setTotal_Seconds(int s);
+        void setHours_Time(int h);
+        void setMinutes_Time(int m);
+        void setAngle(int a);
 };
