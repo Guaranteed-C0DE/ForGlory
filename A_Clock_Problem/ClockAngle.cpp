@@ -49,3 +49,43 @@ void ClockType::setMilitaryTime(bool mt) {
 void ClockType::setTotal_Seconds(int s) {
     total_seconds = s;
 }
+void ClockType::setHours_Time(int h) {
+    hours_time = h;
+}
+
+void ClockType::setMinutes_Time(int m) {
+    minutes_time = m;
+}
+void ClockType::setSeconds_Time(int s) {
+    seconds_time = s; 
+}
+void ClockType::setAngle(int a) {
+    angle = a;
+}
+
+bool ClockType::getMilitaryTime() {
+    if (Military_Time)
+    {
+        cout << "True.\n";
+        return true;
+    }
+    cout << "False.\n";
+    return false;
+}
+
+int ClockType::getTotal_Seconds() {
+    return total_seconds;
+}
+int ClockType::getHours_Time() {
+    return hours_time;
+}
+int ClockType::getMinutes_Time() {
+    return minutes_time;
+}
+int ClockType::getSeconds_Time() {
+    return seconds_time;
+}
+
+int ClockType::getAngle() {
+    return angle;
+}

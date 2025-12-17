@@ -18,5 +18,13 @@ class ClockType {
         void setTotal_Seconds(int s);
         void setHours_Time(int h);
         void setMinutes_Time(int m);
+        void setSeconds_Time(int s);
         void setAngle(int a);
+        bool getMilitaryTime();
+        int getTotal_Seconds();
+        int getHours_Time();
+        int getMinutes_Time();
+        int getSeconds_Time();
+        int getAngle();
+
 };
