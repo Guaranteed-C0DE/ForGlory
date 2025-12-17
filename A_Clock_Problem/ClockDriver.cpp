@@ -66,4 +66,5 @@ int main() {
       clock.setMeridianTime(PM);
    }
 }
+clock.DisplayTime();
 }
