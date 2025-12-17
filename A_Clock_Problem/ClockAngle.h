@@ -1,7 +1,6 @@
 const double RHO = 21600.0/11.0;
 enum MeridianTime {
-    AM, PM, NA
-};
+                AM, PM, NA};
 class ClockType {
     private:
         int hours_time;
@@ -10,6 +9,7 @@ class ClockType {
         int total_seconds;
         int angle;
         bool Military_Time;
+        MeridianTime MeTime;
     public:
         ClockType();
         int Calculate_Angle(int t);
@@ -20,11 +20,15 @@ class ClockType {
         void setMinutes_Time(int m);
         void setSeconds_Time(int s);
         void setAngle(int a);
+        void setMeridianTime(MeridianTime Met);
         bool getMilitaryTime();
         int getTotal_Seconds();
         int getHours_Time();
         int getMinutes_Time();
         int getSeconds_Time();
         int getAngle();
+        MeridianTime getMeridianTime();
         void RequestTime();
+        void DisplayTime();
+
 };

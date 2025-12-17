@@ -8,6 +8,7 @@ ClockType::ClockType() {
     seconds_time = 0;
     total_seconds = 0;
     Military_Time = false;
+    MeTime = NA;
 }
 int ClockType::Calculate_Angle(int t) { //But how is t = RHO even going to be an argument?
     if (fmod(t, 2*RHO) > 0 && fmod(t, 2*RHO) < RHO)
@@ -62,6 +63,9 @@ void ClockType::setSeconds_Time(int s) {
 void ClockType::setAngle(int a) {
     angle = a;
 }
+void ClockType::setMeridianTime(MeridianTime MeT) {
+    MeTime = MeT;
+}
 
 bool ClockType::getMilitaryTime() {
     if (Military_Time)
@@ -88,4 +92,20 @@ int ClockType::getSeconds_Time() {
 
 int ClockType::getAngle() {
     return angle;
+}
+MeridianTime ClockType::getMeridianTime() {
+    return MeTime;
+}
+void ClockType::DisplayTime() {
+    cout << "The time on the clock is:\n";
+    cout << hours_time << ":" << minutes_time << ":" << seconds_time;
+     if (MeTime == AM || MeTime == PM)
+    {
+        cout << MeTime;
+    }
+    if (Military_Time)
+    {
+        cout << "This is in military time.\n";
+    }
+   
 }
