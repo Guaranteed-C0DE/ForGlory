@@ -11,4 +11,11 @@ int main() {
       cout << "Invalid number for hour.\n";
       cin >> response1;
    }
+   cout << response1 << ":";
+   cin>>response2;
+   while (response2 < 0 && response2 > 59)
+   {
+      cout << "Invalid number for minute.\n";
+      cin >> response2;
+   }
 }

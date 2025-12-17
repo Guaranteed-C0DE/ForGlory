@@ -26,5 +26,5 @@ class ClockType {
         int getMinutes_Time();
         int getSeconds_Time();
         int getAngle();
-
+        void RequestTime();
 };
