@@ -15,7 +15,7 @@ class ClockType {
         MeridianTime MeTime;
     public:
         ClockType();
-        int Calculate_Angle(int t);
+        double Calculate_Angle(int t);
         int Calculate_Seconds(int m, int h, int s, bool mt, MeridianTime MeT);
         void setMilitaryTime(bool mt);
         void setTotal_Seconds(int s);
