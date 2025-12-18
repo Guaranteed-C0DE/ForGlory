@@ -27,7 +27,8 @@ class ClockType {
         int getMinutes_Time();
         int getSeconds_Time();
         int getAngle();
-        MeridianTime getMeridianTime();
+        string getMeridianTime(MeridianTime MeT);
+        MeridianTime getMeTeridianTime();
         void RequestTime();
         void DisplayTime();
 

@@ -1,6 +1,7 @@
 #include "ClockAngle.h"
 #include <cmath>
 #include <iostream>
+#include <string>
 using namespace std;
 ClockType::ClockType() {
     hours_time = 0;
@@ -93,19 +94,24 @@ int ClockType::getSeconds_Time() {
 int ClockType::getAngle() {
     return angle;
 }
-MeridianTime ClockType::getMeridianTime() {
-    return MeTime;
+string ClockType::getMeridianTime(MeridianTime MeT) {
+    string names[] = {"A.M.", "P.M.", "N/A"};
+    return names[MeT];
 }
 void ClockType::DisplayTime() {
     cout << "The time on the clock is:\n";
     cout << hours_time << ":" << minutes_time << ":" << seconds_time;
      if (MeTime == AM || MeTime == PM)
     {
-        cout << MeTime;
+        cout << getMeridianTime(getMeTeridianTime()) << endl;
     }
     if (Military_Time)
     {
         cout << "This is in military time.\n";
     }
    
+}
+
+MeridianTime ClockType::getMeTeridianTime() {
+    return MeTime;
 }

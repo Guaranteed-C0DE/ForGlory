@@ -39,7 +39,7 @@ int main() {
    }
    else {
    cout << "Is this in military time?\n";
-   cout << "A. Yes\nB. No";
+   cout << "A. Yes\nB. No\n";
    cin >> response4;
    while (tolower(response4) != 'a' && tolower(response4) != 'b')
    {
@@ -50,7 +50,7 @@ int main() {
    {
       clock.setMilitaryTime(true);
    }
-   cout << "Is this in A.M. or P.M.?\nA. A.M.\nB. P.M.";
+   cout << "Is this in A.M. or P.M.?\nA. A.M.\nB. P.M.\n";
    cin >> response5;
    while (tolower(response5) != 'a' && tolower(response5) != 'b')
    {
