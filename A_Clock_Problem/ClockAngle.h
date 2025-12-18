@@ -1,4 +1,7 @@
+#include <iostream>
+#include <string>
 const double RHO = 21600.0/11.0;
+
 enum MeridianTime {
                 AM, PM, NA};
 class ClockType {
@@ -27,8 +30,8 @@ class ClockType {
         int getMinutes_Time();
         int getSeconds_Time();
         int getAngle();
-        string getMeridianTime(MeridianTime MeT);
-        MeridianTime getMeTeridianTime();
+        std::string getMeridianTime(MeridianTime MeT);
+        MeridianTime getMeTMeridianTime();
         void RequestTime();
         void DisplayTime();
 

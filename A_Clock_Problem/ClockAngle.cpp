@@ -103,7 +103,7 @@ void ClockType::DisplayTime() {
     cout << hours_time << ":" << minutes_time << ":" << seconds_time;
      if (MeTime == AM || MeTime == PM)
     {
-        cout << getMeridianTime(getMeTeridianTime()) << endl;
+        cout << getMeridianTime(getMeTMeridianTime()) << endl;
     }
     if (Military_Time)
     {
@@ -112,6 +112,6 @@ void ClockType::DisplayTime() {
    
 }
 
-MeridianTime ClockType::getMeTeridianTime() {
+MeridianTime ClockType::getMeTMeridianTime() {
     return MeTime;
 }
