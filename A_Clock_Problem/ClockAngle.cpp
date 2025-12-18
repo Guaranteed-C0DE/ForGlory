@@ -246,5 +246,6 @@ void ClockType::DisplayAngle3() {
     
 }
 void ClockType::DisplayTotalSeconds() {
-
+ cout << "The total number of seconds that have passed so far are " << getTotal_Seconds() << endl;
+ DefaultMenu();
 }
