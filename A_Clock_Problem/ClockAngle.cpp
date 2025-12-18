@@ -21,8 +21,8 @@ int ClockType::Calculate_Angle(int t) { //But how is t = RHO even going to be an
     } 
     else if (fmod(t, 2*RHO) > RHO && fmod(t, 2*RHO) < 2*RHO)
     {
-        setAngle((180 - (11/120)*fmod(t, 2*RHO)));
-        return (180 - (11/120)*fmod(t, 2*RHO));
+        setAngle((180 - (11/120)*fmod(t, RHO)));
+        return (180 - (11/120)*fmod(t, RHO));
     }
     else if (fmod(t, 2*RHO)==RHO)
     {
