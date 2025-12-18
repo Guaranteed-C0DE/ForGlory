@@ -183,15 +183,15 @@ void ClockType::RequestTime() {
       cin >> response1;
    }
    cout << response1 << ":";
-   clock.setHours_Time(response1);
+   setHours_Time(response1);
    cin>>response2;
    while (response2 < 0 && response2 > 59)
    {
       cout << "Invalid number for minute.\n";
       cin >> response2;
    }
-   clock.setMinutes_Time(response2);
-   cout << response1 << ":" << response2;
+   setMinutes_Time(response2);
+   cout << response1 << ":" << response2 << ":";
 
    cin >>response3;
    while (response3 < 0 && response3 > 59)
@@ -199,11 +199,11 @@ void ClockType::RequestTime() {
       cout << "Invalid number for second.\n";
       cin >> response3;
    }
-   clock.setSeconds_Time(response3);
-   if (clock.getHours_Time() > 12)
+   setSeconds_Time(response3);
+   if (getHours_Time() > 12)
    {
-      clock.setMilitaryTime(true);
-      clock.setMeridianTime(NA);
+      setMilitaryTime(true);
+      setMeridianTime(NA);
    }
    else {
    cout << "Is this in military time?\n";
@@ -216,7 +216,7 @@ void ClockType::RequestTime() {
    }
    if (response4 == 'a')
    {
-      clock.setMilitaryTime(true);
+      setMilitaryTime(true);
    }
    cout << "Is this in A.M. or P.M.?\nA. A.M.\nB. P.M.\n";
    cin >> response5;
@@ -228,13 +228,13 @@ void ClockType::RequestTime() {
    response5 = tolower(response5);
    if (response5 == 'a')
    {
-      clock.setMeridianTime(AM);
+      setMeridianTime(AM);
    }
    else {
-      clock.setMeridianTime(PM);
+      setMeridianTime(PM);
    }
 }
 Calculate_Seconds(getHours_Time(), getMinutes_Time(), getSeconds_Time(), getMilitaryTime(), getMeTMeridianTime());
-clock.DisplayTime();
+DisplayTime();
 DefaultMenu();
 }

@@ -4,5 +4,6 @@
 using namespace std;
 #include <iostream>
 int main() {
-   
+   ClockType clock;
+   clock.RequestTime();
 }
