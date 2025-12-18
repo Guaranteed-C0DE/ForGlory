@@ -34,5 +34,10 @@ class ClockType {
         MeridianTime getMeTMeridianTime();
         void RequestTime();
         void DisplayTime();
-
+        void DisplayAngle1(); //Angle between minute and hour hand.
+        void DisplayAngle2(); //Angle between minute and second hand.
+        void DisplayAngle3(); //Angle between second and hour hand.
+        void DisplayTotalSeconds();
+        void DefaultMenu();
+        
 };
