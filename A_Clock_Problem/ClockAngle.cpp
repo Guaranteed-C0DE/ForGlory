@@ -236,4 +236,5 @@ void ClockType::RequestTime() {
 }
 Calculate_Seconds(getHours_Time(), getMinutes_Time(), getSeconds_Time(), getMilitaryTime(), getMeTMeridianTime());
 clock.DisplayTime();
+DefaultMenu();
 }
