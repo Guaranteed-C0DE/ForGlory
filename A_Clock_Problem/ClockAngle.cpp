@@ -235,6 +235,16 @@ void ClockType::RequestTime() {
    }
 }
 Calculate_Seconds(getHours_Time(), getMinutes_Time(), getSeconds_Time(), getMilitaryTime(), getMeTMeridianTime());
+Calculate_Angle(getTotal_Seconds());
 DisplayTime();
 DefaultMenu();
+}
+void ClockType::DisplayAngle2() {
+
+}
+void ClockType::DisplayAngle3() {
+    
+}
+void ClockType::DisplayTotalSeconds() {
+
 }
