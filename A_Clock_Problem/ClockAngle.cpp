@@ -13,18 +13,18 @@ ClockType::ClockType() {
     MeTime = NA;
     angle = 0;
 }
-int ClockType::Calculate_Angle(int t) { //But how is t = RHO even going to be an argument?
-    if (fmod(t, 2*RHO) > 0 && fmod(t, 2*RHO) < RHO)
+double ClockType::Calculate_Angle(int t) { //But how is t = RHO even going to be an argument?
+    if (fmod(t, (2*RHO)) > 0 && fmod(t, (2*RHO)) < RHO)
     {
-        setAngle((11/120)*fmod(t, 2*RHO));
-        return (11/120)*fmod(t, 2*RHO);
+        setAngle((11.0/120.0)*fmod(t, (2*RHO)));
+        return (11.0/120.0)*fmod(t, (2*RHO));
     } 
-    else if (fmod(t, 2*RHO) > RHO && fmod(t, 2*RHO) < 2*RHO)
+    else if (fmod(t, (2*RHO)) > RHO && fmod(t, 2*RHO) < 2*RHO)
     {
-        setAngle((180 - (11/120)*fmod(t, RHO)));
-        return (180 - (11/120)*fmod(t, RHO));
+        setAngle((180 - (11.0/120.0)*fmod(t, RHO)));
+        return (180 - (11.0/120.0)*fmod(t, RHO));
     }
-    else if (fmod(t, 2*RHO)==RHO)
+    else if (fmod(t, (2*RHO))==RHO)
     {
         setAngle(180);
         return 180;
@@ -106,7 +106,7 @@ string ClockType::getMeridianTime(MeridianTime MeT) {
 }
 void ClockType::DisplayTime() {
     cout << "The time on the clock is:\n";
-    cout << hours_time << ":" << minutes_time << ":" << seconds_time;
+    cout << hours_time << ":" << minutes_time << ":" << seconds_time << " ";
      if (MeTime == AM || MeTime == PM)
     {
         cout << getMeridianTime(getMeTMeridianTime()) << endl;
@@ -168,7 +168,7 @@ void ClockType::DefaultMenu() {
     }
 }
 void ClockType::DisplayAngle1() {
-cout << "The angle between the minute hand and the hour hand at the current time is " << getAngle() << endl;
+cout << "The angle between the minute hand and the hour hand at the current time is " << getAngle() << " degrees.\n";
 DefaultMenu();
 }
 void ClockType::RequestTime() {
