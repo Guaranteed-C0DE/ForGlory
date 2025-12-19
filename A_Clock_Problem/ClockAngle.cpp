@@ -44,10 +44,10 @@ int ClockType::Calculate_Seconds(int h, int m, int s, bool mt, MeridianTime MeT)
 
     if (MeT == PM)
     {
-        time_in_seconds +=(86400/2);
+        time_in_seconds +=(86400/2); //comment
     }
     setTotal_Seconds(time_in_seconds);
-    return time_in_seconds;
+    return time_in_seconds; //comment
 }
 
 void ClockType::setMilitaryTime(bool mt) {
@@ -58,7 +58,7 @@ void ClockType::setTotal_Seconds(int s) {
     total_seconds = s;
 }
 void ClockType::setHours_Time(int h) {
-    hours_time = h;
+    hours_time = h; //comment
 }
 
 void ClockType::setMinutes_Time(int m) {
